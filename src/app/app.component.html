@@ -1,0 +1,15 @@
+<div class="form-group col-12 image">
+  <input
+    type="file"
+    id="file"
+    #userPhoto
+    (change)="onFileSelected($event)"
+    name="image"
+    autocomplete="off"
+  />
+  <img src="../assets/user.svg" alt="" />
+</div>
+<div *ngIf="fb" class="list">
+  <img src="{{ fb }}" alt="" />
+</div>
+<router-outlet></router-outlet>
